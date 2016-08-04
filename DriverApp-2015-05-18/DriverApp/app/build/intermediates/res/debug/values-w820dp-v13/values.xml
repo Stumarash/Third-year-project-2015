@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Dokes/Desktop/Team/Svn%20Working%20Copy/DriverApp-2015-05-18/DriverApp/app/src/main/res/values-w820dp/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_btn_space">30dp</dimen>
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="activity_image_size">30dp</dimen>
+    <dimen name="activity_slogan_height">80dp</dimen>
+    <dimen name="activity_text_size">32sp</dimen>
+    <dimen name="activity_textbox_vertical_space">64dp</dimen>
+    <dimen name="activity_vertical_margin">64dp</dimen>
+    <dimen name="header_text_size">50sp</dimen>
+</resources>

@@ -1,0 +1,251 @@
+html {
+    min-width: 800px;
+}
+body{
+  
+  height: 100%;
+  
+}
+#navcontainer li
+{
+display: inline;
+list-style-type: none;
+padding-right: 20px;
+float: right;
+}
+#navcontainer {
+    padding-top: 10px;
+}
+header {
+    height: 100px;
+  font-family: 'Comic Sans MS';
+    width: 100%;
+    z-index: 3;
+  position:relative ;
+  text-align: center;
+}
+.nav .navbar-nav > li > a {
+    color: white;
+}
+
+.white, .white a {
+  color: #fff;
+}
+.img {
+    height: 2px;
+}
+#header {
+    height: 30px;
+  background-color: darkslateblue;
+    width: 100%;
+  z-index : 3;
+  position: fixed ;
+  text-align: center;
+}
+.secondnavbar
+ {
+     top: 40px;
+ }
+#menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+}
+#menu a {
+    border: 1px solid black;
+    text-decoration: none;
+    color: grey;
+    width: 100px;
+    padding: 5px 10px;
+    display: inline-block;
+    background-color: white
+}
+#menu ul li{
+	display: inline;
+		
+}
+#content {
+	padding-top: 15%;
+    padding-bottom: 15%;
+    background-color :white;
+}
+#bodycontent {
+ background-color : white;
+}
+.admincontent {
+    padding-top: 10%;
+}
+
+#inputform{
+	clear: both;
+	width: 400px;
+	height: 170px;
+	border-radius: 10px;
+	box-shadow: 0 0 20px grey;
+	text-align: center;
+	background-color: white;
+	margin: auto;
+}
+.inputs{
+	border-radius: 4px;
+	border: 1px solid grey;
+	height: 30px;
+	margin-top: 5px;
+    margin-bottom: 5px;
+    padding-right: 3px;
+    padding-left : 5px;
+}
+.btnlogin{
+	width: 100px;
+	height: 30px;
+	border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+	border-radius:10px;
+	background-color: white;
+    margin-bottom: 5px;
+   
+}
+#mainlogin{
+	width: 100%;
+	
+}
+#table, td, tr {
+	
+	width: 200px;
+	
+}
+#log {
+border: 3px solid black;
+color: #0000FF;
+width: 500px;
+}
+
+#banner {
+    padding-left: 33%;
+    padding-top: 55px;
+  width: 100%;
+  height: 500px;
+  position:fixed;
+    top: 40px;
+    background-image: url(blurred-background-7.jpg);
+    background-size: 100%;
+    background-color: grey;
+}
+
+#homecontent {
+    padding-top: 60px;
+    width: 100%;
+    position: relative;
+    top: 400px;
+    
+    background-color: white;
+    height: 1500px;
+}
+.glyphicon {
+    font-size: 20px;
+}
+.blue {
+   color: blue;
+}
+
+.col-md-4 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.glyphicon-dashboard  {
+    font-size: 300px;
+}
+.glyphicon-cloud {
+    font-size: 300px;
+}
+.glyphicon-phone {
+    font-size: 300px;
+}
+.glyphicon-home {
+    padding-left: 0px;
+}
+tr {
+    padding-bottom: 5px;
+}
+.logpage {
+    padding-top: 13%;
+}
+#regform{
+	clear: both;
+	width: 600px;
+	height: 350px;
+	border-radius: 10px;
+	box-shadow: 0 0 20px grey;
+	text-align: center;
+	background-color: white;
+	margin: auto;
+}
+
+.thisrow {
+    background-color: red ;
+    height: 40px;
+    padding-bottom: 15px;
+    padding-right: 3em;
+}
+
+.btnspace {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+
+.homethumbnail:hover {
+    background-color: red;
+   border: 2px;
+}
+.thumbnail {
+    height: 400px;
+}
+
+.icons {
+    width: 200px;
+    height: 200px;
+   
+}
+
+.list-group-item:hover  {
+    background-color: red;
+  
+}
+
+.adminthumbnail {
+    width: 900px;
+    height: 500px;
+    
+}
+.Push {
+    padding-top: 10%;
+}
+.list-group-item {
+    text-decoration: none;
+}
+/*logs*/
+.active {
+    background-color : grey;
+}
+.success {
+    background-color: green;
+}
+.info {
+    background-color: blue;
+}
+.warning {
+    background-color: yellow;
+}
+.danger {
+    background-color: red;
+}
+.badge {
+    padding-top: 5px; 
+   color: #f89406;
+    
+    text-align: center;
+}

@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.inovatives.driverapp.EmergencyInformation"
+    android:background="@color/start_background_color">
+
+
+  <ScrollView
+      android:id="@+id/emergency_information_scroller"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/start_background_color"
+      android:layout_centerInParent="true"
+      >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/text_emergency_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/emergency_info_title"
+            android:textSize="@dimen/header_text_size"
+
+            />
+
+
+        <TextView
+            android:id="@+id/lbl_emergency_type"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/emergency_type"
+            android:textSize="@dimen/activity_text_size"
+            android:layout_marginTop="@dimen/activity_textbox_vertical_space"
+            android:textColor="@color/text_color"/>
+
+        <EditText
+            android:id="@+id/text_emergency_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textbox_background"
+            android:editable="false"
+            />
+        <TextView
+            android:id="@+id/lbl_emergency_additional_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_btn_space"
+            android:text = "@string/emergency_additional_info"
+            android:textSize="@dimen/activity_text_size"
+            android:textColor="@color/text_color"/>
+
+        <EditText
+            android:id="@+id/txt_additional_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textbox_background"
+            android:editable="false" />
+
+
+
+        <TextView
+            android:id="@+id/lbl_emergency_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/emergency_address"
+            android:textSize="@dimen/activity_text_size"
+            android:layout_marginTop="@dimen/activity_textbox_vertical_space"
+            android:textColor="@color/text_color"/>
+
+        <EditText
+            android:id="@+id/text_emergency_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textbox_background"
+
+            android:editable="false"
+            />
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnAttend"
+            android:textColor="@color/splash_text_color"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:background="@drawable/button_background"
+            android:onClick="goToMaps"
+
+            />
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+<!-- From: file:/C:/Users/Dokes/Desktop/Team/Svn%20Working%20Copy/DriverApp-2015-05-18/DriverApp/app/src/main/res/layout/activity_emergency_information.xml -->

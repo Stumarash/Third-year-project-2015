@@ -1,0 +1,54 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master Pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="Dispatch.aspx.cs" Inherits="TargarianTech.Bootstrap.Dispatch" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <form id="Form1" runat ="server" >
+
+  <div class="container">
+        <div class="logpage">
+<div class="panel panel-danger"> <div class="panel-heading"> Dispatch Vehicle </div>
+  <div class="panel-body">
+
+       <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+              <ContentTemplate>
+      <table>
+            <%-- badge showing number of vehicles available  --%>
+          <tr><td>Available Vehices :</td><td>Fire Brigade <span class="badge badge-warning" id="brigade" runat="server"></span></td><td>Ambulance <span class="badge badge-warning" id="vehicle" runat="server"></span></td></tr>
+      </table>
+      <hr />
+
+       
+    <table >
+     
+     
+       
+       <%-- input of vehicle info --%>
+    <tr><td>Emergency Type</td><td><input type="text"  id="type" name="userid"  class="inputs" style="width:218px" readonly="true" runat="server" /></td></tr>   
+<%--     <tr><td>Number of Fire Brigades</td><td><input type="text" id="fire" name="userid"  class="inputs" style="width:218px" runat="server" /></td></tr>
+     <tr><td>Number of Ambulances:</td><td><input type="text" id="ambulance" name="userid"  class="inputs" style="width:218px" runat="server" /></td></tr>--%>
+   
+        <tr><td>Select Driver:</td><td>
+            <asp:DropDownList ID="DropDownList1" CssClass="inputs" style="width:218px"  runat="server"></asp:DropDownList>
+
+                                   </td></tr>
+    </table>
+         <%-- Button for dispatching --%>
+      <div class="btnspace">
+          <asp:Button ID="BtnLogin" runat="server" Text="Dispatch" BorderStyle="None" CssClass="btn-danger btn-lg col-lg-1" style="margin-left: 29%" OnClick="BtnDispatch_Click" />
+       
+          </div> 
+
+
+ <asp:Timer ID="Timer1" OnTick="Page_Load" Interval="9000" runat="server"></asp:Timer>
+
+           
+            </ContentTemplate>
+        </asp:UpdatePanel>
+  </div></div>
+
+
+        </div>
+        </div>
+       </form> 
+</asp:Content>

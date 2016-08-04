@@ -1,0 +1,169 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    tools:context="com.improveresponse.emergencyapp.ReportReview"
+    android:background="@color/start_background_color">
+
+        <TextView
+            android:id="@+id/review_header_id"
+            android:text="@string/review_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/header_text_size"
+            />
+
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="yes">
+
+                <TableRow
+                    android:id="@+id/report_type_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <TextView
+                        android:id="@+id/report_type_review_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/review_report_type_one"
+                        android:layout_marginRight="10dp"
+                        android:textSize="@dimen/activity_text_size"
+                        />
+
+                    <TextView
+                        android:id="@+id/report_type_review_one_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textSize="@dimen/activity_text_size"
+                        android:layout_weight="1"
+                        />
+
+                    </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <TextView
+                        android:id="@+id/report_type_review_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/review_report_type_two"
+                        android:layout_marginRight="10dp"
+                        android:textSize="@dimen/activity_text_size"
+                        />
+
+                    <TextView
+                        android:id="@+id/report_type_review_two_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/activity_text_size"
+                        android:layout_weight="1"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <TextView
+                        android:id="@+id/report_type_review_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/review_report_type_three"
+                        android:layout_marginRight="10dp"
+                        android:textSize="@dimen/activity_text_size"
+                        />
+
+                    <TextView
+                        android:id="@+id/report_type_review_three_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textSize="@dimen/activity_text_size"
+                        android:layout_weight="1"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <TextView
+                        android:id="@+id/report_type_review_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/review_report_type_four"
+                        android:layout_marginRight="10dp"
+                        android:textSize="@dimen/activity_text_size"
+                        />
+
+                    <TextView
+                        android:id="@+id/report_type_review_four_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/activity_text_size"
+                        android:layout_weight="1"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                    <TextView
+                        android:id="@+id/report_type_review_six"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/review_report_type_six"
+                        android:layout_marginRight="10dp"
+                        android:textSize="@dimen/activity_text_size"
+                        />
+
+                    <TextView
+                        android:id="@+id/report_type_review_six_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textSize="@dimen/activity_text_size"
+                        android:layout_weight="1"
+                        />
+
+                    </TableRow>
+
+            </TableLayout>
+            </ScrollView>
+
+        <Button
+            android:id="@+id/button_cancel_report"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/review_cancel"
+            android:textSize="@dimen/activity_text_size"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:textColor="@color/start_background_color"
+            android:background="@drawable/button_background"/>
+
+    </LinearLayout>

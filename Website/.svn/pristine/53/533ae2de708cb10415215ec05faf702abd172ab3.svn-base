@@ -1,0 +1,38 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master Pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="Dispatch.aspx.cs" Inherits="TargarianTech.Bootstrap.Dispatch" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <form id="Form1" runat ="server" >
+
+  <div class="container">
+        <div class="logpage">
+<div class="panel panel-danger"> <div class="panel-heading"> Dispatch Vehicle </div>
+  <div class="panel-body">
+      <table>
+            <%-- badge showing number of vehicles available  --%>
+          <tr><td>Available Vehices :</td><td>Fire Brigade <span class="badge badge-warning">15</span></td><td>Ambulance <span class="badge badge-warning">25</span></td></tr>
+      </table>
+      <hr />
+    <table >
+     
+     
+       
+       <%-- input of vehicle info --%>
+    <tr><td>Emergency Type</td><td><input type="text"  id="type" name="userid"  class="inputs" style="width:218px" readonly="true" runat="server" /></td></tr>   
+     <tr><td>Number of Fire Brigades</td><td><input type="text" id="fire" name="userid"  class="inputs" style="width:218px" runat="server" /></td></tr>
+     <tr><td>Number of Ambulances:</td><td><input type="text" id="ambulance" name="userid"  class="inputs" style="width:218px" runat="server" /></td></tr>
+   
+        <tr><td></td><td></td></tr>
+    </table>
+         <%-- Button for dispatching --%>
+      <div class="btnspace">
+          <asp:Button ID="BtnLogin" runat="server" Text="Dispatch" BorderStyle="None" CssClass="btn-danger btn-lg col-md-1" style="margin-left: 29%" OnClick="BtnDispatch_Click" />
+       
+          </div> 
+  </div></div>
+
+
+        </div>
+        </div>
+       </form> 
+</asp:Content>

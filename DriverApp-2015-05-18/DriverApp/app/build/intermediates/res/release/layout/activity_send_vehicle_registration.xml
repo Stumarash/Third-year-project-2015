@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.inovatives.driverapp.SendVehicleRegistration"
+    android:background="@color/start_background_color">
+
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+         >
+
+         <TextView
+             android:id="@+id/text_vehicle_choose"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:text="@string/vehicle_choose_header"
+             android:textSize="@dimen/activity_text_size"/>
+
+           <Spinner
+               android:id="@+id/vehicles_spinner"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:entries="@array/registration_vehicle_array"
+
+             />
+
+         <TextView
+             android:id="@+id/lbl_vehicle_registration_header"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:text="@string/vehicle_registration_header"
+             android:textSize="@dimen/activity_text_size"
+             android:layout_marginTop="@dimen/activity_textbox_vertical_space"/>
+
+         <EditText
+             android:id="@+id/text_vehicle_registration_header"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/textbox_background"
+             android:hint="@string/vehicle_registration_header"
+             />
+    </LinearLayout>
+</RelativeLayout>
+<!-- From: file:/C:/Users/NEO/Documents/New%20folder/DriverApp/app/src/main/res/layout/activity_send_vehicle_registration.xml -->

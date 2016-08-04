@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.inovatives.driverapp.Profile">
+
+    <LinearLayout
+        android:id="@+id/login_input_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/edit_user"
+            android:contentDescription="@string/title_activity_profile"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            />
+        <TextView
+            android:id="@+id/lbl_first_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/activity_text_size"
+            android:text="@string/profile_name"
+            />
+
+        <EditText
+            android:id="@+id/txt_first_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/profile_name"
+            android:background="@drawable/textbox_background"
+            android:editable="false"
+            />
+
+        <TextView
+            android:id="@+id/lbl_last_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/activity_text_size"
+            android:layout_marginTop="@dimen/activity_textbox_vertical_space"
+            android:text="@string/profile_lastname"
+            android:editable="false"
+            />
+
+        <EditText
+            android:id="@+id/txt_surname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/profile_lastname"
+            android:background="@drawable/textbox_background"
+            android:editable="false"/>
+
+        <TextView
+            android:id="@+id/lbl_dateOfBirth"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_date_of_birth"
+            android:textSize="@dimen/activity_text_size"
+            android:layout_marginTop="@dimen/activity_textbox_vertical_space"/>
+
+        <EditText
+            android:id="@+id/txt_dateOfBirth"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/profile_date_of_birth"
+            android:background="@drawable/textbox_background"
+            android:editable="false"
+            />
+
+        <TextView
+            android:id="@+id/lbl_gender"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_textbox_vertical_space"
+            android:textSize="@dimen/activity_text_size"
+            android:text="@string/profile_gender"
+            />
+
+        <EditText
+            android:id="@+id/txt_gender"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/profile_gender"
+            android:background="@drawable/textbox_background"
+            android:editable="false"
+            />
+
+
+        <TextView
+            android:id="@+id/lbl_email_acc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_textbox_vertical_space"
+            android:textSize="@dimen/activity_text_size"
+            android:text="@string/profile_email"
+            />
+
+        <EditText
+            android:id="@+id/txt_email_profile"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/profile_email"
+            android:background="@drawable/textbox_background"
+            android:editable="false"
+            />
+
+        <TextView
+            android:id="@+id/lbl_register_phoneNum"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_contact_num"
+            android:textSize="@dimen/activity_text_size"
+            android:layout_marginTop="@dimen/activity_textbox_vertical_space"/>
+
+        <LinearLayout
+            android:id="@+id/register_phone_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/region_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/profile_country_code"
+                android:textSize="@dimen/activity_text_size"/>
+
+            <EditText
+                android:id="@+id/txt_phoneNum"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbox_background"
+                android:hint="@string/profile_contact_num"
+                android:maxLength="9"
+                android:editable="false"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+<!-- From: file:/C:/Users/Dokes/Desktop/Team/Svn%20Working%20Copy/DriverApp-2015-05-18/DriverApp/app/src/main/res/layout/activity_profile.xml -->

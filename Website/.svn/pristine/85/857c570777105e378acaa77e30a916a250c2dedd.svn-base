@@ -1,0 +1,88 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Net;
+using System.Net.Mail;
+
+namespace TargarianTech
+{
+    public partial class UpdateEmergency : System.Web.UI.Page
+    {
+        string ref_num;
+        int emergency_id;
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Request.QueryString["id"] != null)
+            {
+
+                emergency_id = Int32.Parse(Request.QueryString["id"]);
+
+                TarReference.UserDataServiceClient client = new TarReference.UserDataServiceClient();
+                string emergency = client.view(emergency_id);
+
+                string[] lister = emergency.Split(',');
+                Random rnd = new Random();
+                int ref_random = rnd.Next(1, 100);
+                ref_num = string.Concat("EMER", ref_random);
+
+                if (lister[3].Equals("n"))
+                {
+                    lister[3] = "none";
+                }
+                if (lister[2].Equals("n"))
+                {
+                    lister[2] = "none";
+                }
+                cName.Value = lister[5];
+                surname.Value = lister[6];
+                location.Value = lister[0];
+
+                condition.Value = lister[3];
+                emergencyname.Value = lister[4];
+
+                extra.Value = lister[2];
+
+                refnum.Value = ref_num;
+                client.Close();
+            }
+        }
+        protected void BtnUpdateEmergency_Click(object sender, EventArgs e)
+        {
+
+            // This is the code to send a sms
+            //string msg;
+            //msg = "We have recieved your incident and we are sending out our team. RefNum 01254757";
+            //WebClient client = new WebClient();
+
+            //client.OpenRead(baseurl);
+
+         /*   MailMessage mailMessage = new MailMessage();
+            mailMessage.To.Add("kgotso.chacha@gmail.com");
+            mailMessage.From = new MailAddress("201317579@student.uj.ac.za");
+            mailMessage.Subject = "Reference Number";
+            mailMessage.Body = "The inicident is being attended to Dokes. Thanks for reporting. Your referenced number is "+ ref_num+" for any enquiries";
+            SmtpClient smtpClient = new SmtpClient("smtp.dsl.telkomsa.net");
+            smtpClient.Send(mailMessage);
+            */
+
+            TarReference.UserDataServiceClient client = new TarReference.UserDataServiceClient();
+
+           
+            int level = 0;
+
+            level = Convert.ToInt32(plevel.SelectedIndex);
+
+            client.updateEmergency(emergency_id, level, ref_num);
+
+
+            Response.Redirect("../Pages/Dispatch.aspx?id=" + emergency_id);
+            client.Close();
+
+        }
+
+      
+    }
+}

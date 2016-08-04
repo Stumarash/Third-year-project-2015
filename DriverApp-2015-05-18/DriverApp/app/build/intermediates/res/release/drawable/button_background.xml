@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/splash_background_color"/>
+            <stroke
+                android:width="2dp"
+                android:color="@color/splash_text_color"/>
+            <corners
+                android:radius="10dp"/>
+            <padding
+                android:bottom="15dp"
+                android:top="15dp"
+                android:left="15dp"
+                android:right="15dp" />
+        </shape>
+    </item>
+    <item >
+        <shape>
+            <gradient android:startColor="@color/splash_background_color"
+                android:endColor="@color/btn_end_color"
+                android:angle="270"/>
+            <stroke
+                android:width="2dp"
+                android:color="@color/splash_text_color"/>
+            <corners
+                android:radius="10dp"/>
+            <padding
+                android:bottom="15dp"
+                android:top="15dp"
+                android:left="15dp"
+                android:right="15dp" />
+        </shape>
+    </item>
+</selector><!-- From: file:/C:/Users/NEO/Documents/New%20folder/DriverApp/app/src/main/res/drawable/button_background.xml -->

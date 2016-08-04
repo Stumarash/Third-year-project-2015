@@ -1,0 +1,87 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master Pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="logs.aspx.cs" Inherits="TargarianTech.logs" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+      <script type="text/javascript">
+          function openModal() {
+              $('#myModal').modal('show');
+          }
+</script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <form runat ="server" >
+        <div class="container">
+            <div class="logpage">
+
+
+<div id="myModal" class="modal fade">
+
+ <div class="modal-dialog">
+
+ <div class="modal-content">
+
+  <div class="modal-header">
+
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+  <h4 class="modal-title">New Emergency</h4>
+
+ </div>
+
+ <div class="modal-body">
+  <p>There is a new emergency</p>
+ </div>
+
+ <div class="modal-footer">
+
+     <div class="btnspace">
+      
+    
+          <asp:Button ID="BtnLogin" runat="server" Text="View" BorderStyle="None" CssClass="btn-danger btn-sm"  Style="margin-left: 90%" OnClick="btnViewModal_Click" />
+      
+          </div> 
+
+  </div>
+ </div>
+</div>
+</div>
+
+
+
+                    
+               <%-- page for showing emergency logs in different states --%>
+                <header><h2>Emergency list</h2></header>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <asp:GridView ID="GridView1" CssClass="table table-hover table-striped" GridLines="None" runat="server" OnRowCommand="GridView1_RowCommand" OnRowDataBound="GridView1_RowDataBound" AutoGenerateColumns="false" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                    <Columns>
+                            
+
+                            <asp:BoundField  DataField="EMERGENCY_ID" HeaderText="Emergency" AccessibleHeaderText="EMERGENCY_ID"/>
+                            <asp:BoundField  DataField="EMERGENCY_TYPE" HeaderText="Emergency Type" />
+	                        <asp:BoundField  DataField="EMERENCY_TIME" HeaderText="Time" />
+                            <asp:BoundField  DataField="EMERGENCY_LOCATION" HeaderText="Location" />
+                            <asp:BoundField  DataField="EMERGENCY_STATUS" HeaderText="Status" />
+                         
+                            <asp:ButtonField CommandName="detail" ControlStyle-BorderStyle="Double" ControlStyle-CssClass="btnspace btn-default btn-sm col-xs-5"  ButtonType="Button" Text="View" HeaderText="Detailed View" >
+                                
+                            </asp:ButtonField>
+                         
+                    </Columns>
+                </asp:GridView>
+                <asp:Timer ID="Timer1" OnTick="Page_Load" Interval="1000" runat="server"></asp:Timer>
+               <%-- 
+                 <asp:Timer ID="Timer2" OnTick="timer1_Tick" Interval="5000" runat="server"></asp:Timer>
+
+                <asp:Timer ID="Timer3" OnTick="timer2_Tick" Interval="2000" runat="server"></asp:Timer>
+
+             <asp:Timer ID="Timer4" OnTick="timer3_Tick" Interval="1000" runat="server"></asp:Timer>--%>
+
+                
+            </ContentTemplate>
+        </asp:UpdatePanel>
+                 </div>
+        </div>
+        </form>
+  
+   
+</asp:Content>

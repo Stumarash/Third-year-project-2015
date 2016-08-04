@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace TargarianTech.Bootstrap
+{
+    public partial class Index : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        //button to login
+        protected void BtnSubmit_Click(object sender, EventArgs e)
+        {
+           //here we are creating a new client that will access validate method from web service
+           TarReference.UserDataServiceClient client = new TarReference.UserDataServiceClient();
+
+           //store validated value in a session[Login]
+            string status = client.validate("O",Request["userid"], Request["pass"]);
+
+            if (status.Equals(""))
+            {
+                //If session is null the user details provided were wrong
+                Label1.Visible = true;
+                Label1.Text = "Password or Username wrong";
+            }
+            else
+            {
+                //else redirect user to logs page
+                Response.Redirect("../Pages/logs.aspx");
+            }
+
+            client.Close();
+        }
+
+     
+
+    }
+}

@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.improveresponse.emergencyapp.ReportView">
+
+    <item
+        android:id="@+id/profile_pic"
+        android:title="@string/app_profile_menu"
+        android:icon="@drawable/user"
+        android:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/profile_view"
+                android:title="@string/activity_profile_view"/>
+
+            <item android:id="@+id/action_settings"
+                android:title="@string/action_settings"/>
+
+            <item
+                android:id="@+id/logout_menu"
+                android:title="@string/title_profile_logout"/>
+            <item
+                android:id="@+id/profile_about"
+                android:title="@string/activity_profile_about"/>
+
+        </menu>
+    </item>
+
+</menu>

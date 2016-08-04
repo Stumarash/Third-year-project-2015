@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.inovatives.emergencyapp.BaseActivity">
+    <item
+        android:id="@+id/profile_pic"
+        android:title="@string/app_profile_menu"
+
+        android:showAsAction="always">
+    <menu>
+        <item
+            android:id="@+id/profile_view"
+            android:title="@string/activity_profile_view"
+            android:onClick="Profile"/>
+        <item
+            android:id="@+id/viewEmergency"
+            android:title="View Emergency"
+            android:onClick=""
+            />
+
+
+        <item
+            android:id="@+id/logout_menu"
+            android:title="@string/title_profile_logout"
+            />
+
+
+        <item
+            android:id="@+id/profile_about"
+            android:title="@string/activity_profile_about"/>
+
+    </menu>
+    </item>
+</menu>
+<!-- From: file:/C:/Users/NEO/Documents/New%20folder/DriverApp/app/src/main/res/menu/menu_emergency.xml -->

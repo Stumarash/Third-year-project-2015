@@ -1,0 +1,165 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master Pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="ChangeAdmin.aspx.cs" Inherits="TargarianTech.AddAdmin" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <%-- Side panel menu --%>
+    <form id="Form1" runat ="server" >
+    <div class="container">
+    <div class="alert alert-info Push" role="alert">
+  <a href="#" class="alert-link"></a>
+</div>
+            
+        </div>
+    <div class="admincontent col-md-3">
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-danger">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          Manage Employees
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+             <ul class="list-group">
+       <li class="list-group-item"><a href="AddEmployee.aspx">Add Employee</a></li>
+  <li class="list-group-item"><a href="ViewEmployees.aspx">View Employees</a></li>
+ 
+
+      </ul>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-danger">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+         Administration
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+        <ul class="list-group">
+             <li class="list-group-item"><a href="ChangeAdmin.aspx">Change Administrator</a></li>
+  
+
+      </ul>
+          </div>  
+    </div>
+  </div>
+  <div class="panel panel-danger">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Manage Reports
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">
+      <ul class="list-group">
+    
+  
+<li class="list-group-item"><a href="OperatorReports.aspx">Operator Report</a> </li>
+  <li class="list-group-item"><a href="MedicalReport.aspx">Medical Report</a></li>
+  <li class="list-group-item"><a href="FireReport.aspx">Fire Report</a></li>
+  <li class="list-group-item"><a href="NumEmergenciesReport.aspx">Number Of Emergencies Report</a></li>
+<li class="list-group-item"><a href="UsersOfSystem.aspx">Number Of Users Reports</a></li>
+
+      </ul>
+            </div>
+    </div>
+  </div>
+</div>
+        
+        </div>
+    <div class="Push">
+      <div class="col-md-6">
+          <div class="panel panel-danger adminthumbnail">  
+        <div class="panel-heading">Employees</div>
+  <div class="panel-body">
+    
+
+</div>
+
+			<table class="table">
+ <thead>
+        
+        <tr>
+            
+            <th>Employee ID</th>
+            <th>Name </th>
+            <th>Surname</th>
+            <th>Address</th>
+            <th>Change Admin</th>
+            
+           
+               
+        </tr>
+          
+    </thead>
+    <tbody>
+        <tr >
+            <td>123589</td>
+            <td>mike</td>
+           
+            <td>Adams</td>
+             <td>16 Reibeeck street hursthill, johanesburg</td>
+            <%-- indicator for admin --%>
+            <td><input type="radio" name="Admin" value="id" style="text-align : center;  margin-left: 35%;"/></td>
+           
+           
+
+        </tr>
+        <tr>
+            <td>145269</td>
+            <td>Thomas</td>
+            
+            <td>Cartwright</td>
+            <td>Cnr Jeppe and Cnr Commissioner, Johanessburg</td>
+             <td><input type="radio" name="Admin" value="id" style="text-align : center;   margin-left: 35%;"/></td>
+            
+            
+
+        </tr>
+            <tr>
+            <td>755269</td>
+            <td>John</td>
+            
+            <td>Williamson</td>
+            <td>4 Zinc Street, Kempton Park</td>
+            <td><input type="radio" name="Admin" value="id" style="text-align : center;  margin-left: 35%;"/></td>
+            
+
+        </tr>
+       
+            <tr>
+            <td>2585269</td>
+            <td>Matt</td>
+            
+            <td>Johnson</td>
+            <td>Cnr Jeppe and Cnr Commissioner, Johanessburg</td>
+          <td><input type="radio" name="Admin" value="id" style="text-align : center;  margin-left: 35%;"/></td>
+            
+
+        </tr>
+
+        
+        </tbody> 
+</table>
+         
+    </div>
+  
+   </div>
+        </div>
+        </form>
+    <script src="Jquery/jquery-1.11.min.js"></script>
+    <script src="Bootstrap/bootstrap.min.js"></script>
+    
+   
+
+    <script src="Jquery/jquery-1.11.min.js"></script>
+    <script src="../Styler/Bootstrap/bootstrap.min.js"></script>
+</asp:Content>

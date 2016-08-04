@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.improveresponse.emergencyapp.IncidentReport"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        android:id="@+id/medical_report_header_review"
+        android:text="@string/incident_report_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/search_text_size"
+        android:textColor="@color/text_color_all"
+        />
+
+
+        <TextView
+            android:id="@+id/lbl_medical_extra"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/incident_report_extra"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="@dimen/activity_text_size"
+            android:layout_marginTop="@dimen/activity_btn_space"
+            android:textColor="@color/text_color_all"/>
+
+        <EditText
+            android:id="@+id/txt_medical_report_type"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textbox_background"
+            android:hint="@string/register_screen_medicalHint"
+            android:inputType="textMultiLine"
+            android:focusableInTouchMode="true"
+            />
+
+   <ScrollView
+        android:id="@+id/scroller_location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/location_text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textSize="@dimen/activity_text_size"
+            android:text="@string/searching_gps"
+            android:gravity="center"
+            />
+
+        </ScrollView>
+    <Button
+        android:id="@+id/button_cancel_report"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/incident_report_button"
+        android:textSize="@dimen/activity_text_size"
+        android:textColor="@color/start_background_color"
+        android:background="@drawable/button_background"
+
+        android:onClick="goReview"/>
+
+</LinearLayout>

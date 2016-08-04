@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace TargarianTech.Pages
+{
+    public partial class admin : System.Web.UI.Page
+    {
+        //private string gender;
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnRegister_Click(object sender, EventArgs e)
+        {
+           /* TarReference.UserDataServiceClient client = new TarReference.UserDataServiceClient();
+
+
+            client.addEmployee(Request["userid"], Request["employeeName"], Request["employeeSname"], Request["sex"], "mail@work.com", Request["pass"], "O", Request["EmployeeAddress"]);
+            client.Close();*/
+        }
+    }
+}

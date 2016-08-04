@@ -1,0 +1,258 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.improveresponse.emergencyapp.ProfileEdit"
+    android:background="@color/start_background_color">
+
+
+        <LinearLayout
+            android:id="@+id/login_input_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin">
+
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user"
+                android:contentDescription="@string/title_activity_profile"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                />
+            <TextView
+                android:id="@+id/lbl_first_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/activity_text_size"
+                android:text="@string/register_screen_name"
+                />
+
+            <EditText
+                android:id="@+id/txt_first_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/register_screen_name"
+                android:background="@drawable/textbox_background"
+                android:inputType="textPersonName"
+                 />
+
+            <TextView
+                android:id="@+id/lbl_last_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/activity_text_size"
+                android:layout_marginTop="@dimen/activity_textbox_vertical_space"
+                android:text="@string/register_screen_surname"
+                />
+
+            <EditText
+                android:id="@+id/txt_surname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/register_screen_surname"
+                android:background="@drawable/textbox_background"
+                android:inputType="textPersonName"
+
+                />
+
+            <TextView
+                android:id="@+id/lbl_register_dateOfBirth"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_screen_dateOfBirth"
+                android:textSize="@dimen/activity_text_size"
+                android:layout_marginTop="@dimen/activity_textbox_vertical_space"/>
+
+            <EditText
+                android:id="@+id/txt_register_dateOfBirth"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/register_screen_dateOfBirth"
+                android:background="@drawable/textbox_background"
+                android:inputType="datetime"
+
+                />
+
+            <TextView
+                android:id="@+id/lbl_gender"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_textbox_vertical_space"
+                android:textSize="@dimen/activity_text_size"
+                android:text="@string/register_screen_gender"
+                />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/lbl_gender_m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/activity_text_size"
+                    android:text="@string/register_screen_gender_male"
+                    android:layout_weight="1"
+                    />
+
+                <RadioButton
+                    android:id="@+id/lbl_gender_f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/activity_text_size"
+                    android:text="@string/register_screen_gender_female"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lbl_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_textbox_vertical_space"
+                android:textSize="@dimen/activity_text_size"
+                android:text="@string/register_screen_email"
+
+                />
+
+            <EditText
+                android:id="@+id/txt_Email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="@string/register_screen_email"
+                android:background="@drawable/textbox_background"
+
+                />
+
+            <TextView
+                android:id="@+id/lbl_register_phoneNum"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_screen_cellNo"
+                android:textSize="@dimen/activity_text_size"
+                android:layout_marginTop="@dimen/activity_textbox_vertical_space"/>
+
+            <LinearLayout
+                android:id="@+id/register_phone_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/register_region_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_screen_countryCode"
+                    android:textSize="@dimen/activity_text_size"/>
+
+                <EditText
+                    android:id="@+id/txt_register_phoneNum"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textbox_background"
+                    android:hint="@string/register_screen_cellNo"
+                    android:inputType="phone"
+                    android:maxLength="9"
+
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/lbl_register_nextKinName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_screen_nextKinName"
+                android:textSize="@dimen/activity_text_size"
+                android:layout_marginTop="@dimen/activity_textbox_vertical_space"/>
+
+            <EditText
+                android:id="@+id/txt_register_nextKinName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbox_background"
+                android:hint="@string/register_screen_nextKinName"
+                android:inputType="textNoSuggestions"
+
+                />
+
+            <TextView
+                android:id="@+id/lbl_register_nextKinPhoneNum"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_screen_nextKinCellNo"
+                android:textSize="@dimen/activity_text_size"
+                android:layout_marginTop="@dimen/activity_textbox_vertical_space"/>
+
+            <LinearLayout
+                android:id="@+id/register_nextKinphone_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/register_nextKinregion_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_screen_countryCode"
+                    android:textSize="@dimen/activity_text_size"/>
+
+                <EditText
+                    android:id="@+id/txt_register_nextKinphoneNum"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textbox_background"
+                    android:hint="@string/register_screen_nextKinCellNo"
+                    android:inputType="phone"
+                    android:maxLength="9"
+
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/lbl_register_medicalCondition"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_screen_medicalCondition"
+                android:textSize="@dimen/activity_text_size"
+                android:layout_marginTop="@dimen/activity_textbox_vertical_space"/>
+
+            <EditText
+                android:id="@+id/txt_profile_medicalCondition"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbox_background"
+                android:hint="@string/register_screen_medicalHint"
+                android:inputType="textMultiLine"
+
+                />
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_profile_update"
+                android:textColor="@color/splash_text_color"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/button_background"
+
+
+                />
+        </LinearLayout>
+
+    </ScrollView>
+

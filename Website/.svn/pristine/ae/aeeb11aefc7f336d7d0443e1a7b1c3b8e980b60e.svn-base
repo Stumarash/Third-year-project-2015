@@ -1,0 +1,39 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master Pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="logs.aspx.cs" Inherits="TargarianTech.logs" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <form runat ="server" >
+        <div class="container">
+            <div class="logpage">
+    
+               <%-- page for showing emergency logs in different states --%>
+                <header><h2>Emergency list</h2></header>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <asp:GridView ID="GridView1" CssClass="table table-hover table-striped" GridLines="None" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="false" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                    <Columns>
+                            
+
+                            <asp:BoundField  DataField="EMERGENCY_ID" HeaderText="Emergency" AccessibleHeaderText="EMERGENCY_ID"/>
+                            <asp:BoundField  DataField="EMERGENCY_TYPE" HeaderText="Emergency Type" />
+	                        <asp:BoundField  DataField="EMERENCY_TIME" HeaderText="Time" />
+                            <asp:BoundField  DataField="EMERGENCY_LOCATION" HeaderText="Location" />
+                            <asp:BoundField  DataField="EMERGENCY_STATUS" HeaderText="Status" />
+                         
+                            <asp:ButtonField CommandName="detail" ControlStyle-BorderStyle="Double" ControlStyle-CssClass="btnspace btn-default btn-sm col-xs-5"  ButtonType="Button" Text="View" HeaderText="Detailed View" >
+                                
+                            </asp:ButtonField>
+                         
+                    </Columns>
+                </asp:GridView>
+                <asp:Timer ID="Timer1" OnTick="Page_Load" Interval="1000" runat="server"></asp:Timer>
+                
+            </ContentTemplate>
+        </asp:UpdatePanel>
+                 </div>
+        </div>
+        </form>
+  
+   
+</asp:Content>

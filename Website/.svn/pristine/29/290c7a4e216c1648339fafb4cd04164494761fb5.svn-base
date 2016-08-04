@@ -1,0 +1,58 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master Pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="UpdateEmergency.aspx.cs" Inherits="TargarianTech.UpdateEmergency" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            height: 35px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <form id="Form1" runat ="server" >
+     <div class="container">
+        <div class="logpage">
+    <div class="panel panel-danger">  
+        <div class="panel-heading">Details of civilian</div>
+  <div class="panel-body">
+      <table>
+            <%-- Showing different types of levels  --%>
+          <tr><td>Level 1 - Life Threatenig</td><td>Level 2 - Critical</td><td>Level 3 - Urgent</td><td>Level 4 - Dead</td></tr>
+      </table>
+      <hr />
+ <table>
+     
+     <tr><td>Name:</td><td><input type="text" id="cName" name="userid"  readonly="true" class="inputs" runat="server"/></td></tr>
+     <tr><td>Surname:</td><td><input type="text" id="surname" runat="server" name="userid"   readonly="true" class="inputs"/></td></tr>
+     <tr><td>Location:</td><td><input type="text" id="location" runat="server" name="userid"   readonly="true" class="inputs"/></td></tr>
+     <tr><td>Medical condition:</td><td><input type="text" id="condition" runat="server" name="userid" readonly="true" class="inputs"/></td></tr>
+     <tr><td>Additional info:</td><td><input type="text" id="extra" runat="server" name="userid"  readonly="true" class="inputs"/></td></tr>
+     <tr><td>Emergency name: </td><td><input type="text" id="emergencyname" runat="server" name="userid" readonly="true" class="inputs"/></td></tr>
+     <tr><td>Reference Number:</td><td><input type="text" id="refnum" runat="server" name="userid"  class="inputs"  readonly="true"/></td></tr>
+     <tr><td class="auto-style1">Priority level:</td><td class="auto-style1">
+         
+                             <select id="plevel" runat="server" class="inputs">
+                                        <option value="1">1</option> 
+                                        <option value="2">2</option>
+                                        <option value="3">3</option> 
+                                        <option value="4">4</option>    
+                                     </select>
+         
+         &nbsp;</td></tr>
+
+      <%-- Button for dispatching --%>
+ </table>
+      <div class="btnspace">
+      
+    
+          <asp:Button ID="BtnLogin" runat="server" Text="Update" BorderStyle="None" CssClass="btn-danger btn-lg col-md-1" Style="margin-left: 25%; " OnClick="BtnUpdateEmergency_Click" />
+      
+          </div> 
+     
+
+  </div>
+          
+</div>
+
+            </div> 
+         </div> 
+         </form>
+</asp:Content>

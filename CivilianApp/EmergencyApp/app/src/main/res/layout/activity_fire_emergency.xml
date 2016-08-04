@@ -1,0 +1,146 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.improveresponse.emergencyapp.FireEmergency"
+    android:background="@color/start_background_color">
+
+    <LinearLayout
+        android:id="@+id/fire_report_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:gravity="center_horizontal">
+
+     <TextView
+         android:id="@+id/fire_heading_text"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/fire_heading"
+         android:textSize="@dimen/activity_text_size"
+         android:textStyle="bold"
+         android:textAllCaps="true"
+         />
+
+        <RadioGroup
+            android:id="@+id/fire_minor_major_radiobuttons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+              android:id="@+id/fire_option_one"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/fire_header_small"
+              android:textSize="@dimen/activity_text_size"
+              android:layout_marginTop="@dimen/activity_vertical_margin"
+              android:onClick="cmdMinor_Fire_Click"/>
+
+            <RadioButton
+              android:id="@+id/fire_option_two"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/fire_header_big"
+              android:textSize="@dimen/activity_text_size"
+              android:layout_marginTop="@dimen/activity_vertical_margin"
+              android:onClick="cmdMajor_Fire_Click"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/fire_heading_text_two"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fire_heading_two"
+            android:textSize="@dimen/activity_text_size"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+        <CheckBox
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_chem"
+            android:layout_gravity="left"
+            android:textSize="@dimen/activity_text_size"
+            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+
+        <CheckBox
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_type_struct"
+            android:layout_gravity="left"
+            android:textSize="@dimen/activity_text_size"
+            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+        <CheckBox
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_type_struct_2"
+            android:layout_gravity="left"
+            android:textSize="@dimen/activity_text_size"
+            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+        <CheckBox
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_vehicle"
+            android:layout_gravity="left"
+            android:textSize="@dimen/activity_text_size"
+            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+        <CheckBox
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_air"
+            android:layout_gravity="left"
+            android:textSize="@dimen/activity_text_size"
+            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+        <CheckBox
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_unknown"
+            android:layout_gravity="left"
+            android:textSize="@dimen/activity_text_size"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            />
+
+
+        <TextView
+            android:id="@+id/fire_heading_text_three"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fire_heading_three"
+            android:textSize="@dimen/activity_text_size"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/activity_vertical_margin"/>
+        <CheckBox
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_ambulance"
+            android:layout_gravity="left"
+            android:text="@string/fire_check_injured"
+            android:textSize="@dimen/activity_text_size"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fire_button_report"
+            android:id="@+id/button_report"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/activity_text_size"
+            style="?android:attr/borderlessButtonStyle"
+            android:onClick="goReview"
+            android:textColor="@color/start_background_color"
+            android:background="@drawable/button_background"/>
+
+    </LinearLayout>
+</ScrollView>
+

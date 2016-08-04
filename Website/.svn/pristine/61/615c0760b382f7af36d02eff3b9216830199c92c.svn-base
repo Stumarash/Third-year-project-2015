@@ -1,0 +1,98 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master Pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="FireReport.aspx.cs" Inherits="TargarianTech.Bootstrap.FireReport" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <%-- side panel menu --%>
+    <form id="Form1" runat ="server" >
+       <div class="container">
+    <div class="alert alert-info Push" role="alert">
+  <a href="#" class="alert-link">  </a>
+</div>
+            
+        </div>
+    <div class="admincontent col-md-3">
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-danger">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          Manage Employees
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+             <ul class="list-group">
+       <li class="list-group-item"><a href="../Pages/AddEmployee.aspx">Add Employee</a></li>
+ 
+ <li class="list-group-item"><a href="../Pages/ViewEmployees.aspx">View Employees</a></li>
+ 
+
+      </ul>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-danger">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+         Administration
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+        <ul class="list-group">
+              <li class="list-group-item"><a href="../Pages/ChangeAdmin.aspx">Change Administrator</a></li>
+  
+
+      </ul>
+          </div>  
+    </div>
+  </div>
+  <div class="panel panel-danger">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Manage Reports
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">
+      <ul class="list-group">
+      
+  <li class="list-group-item"><a href="../Reports/OperatorReports.aspx">Generate Operator Reports</a> </li>
+  <li class="list-group-item"><a href="../Reports/MedicalReport.aspx">Generate Medical Reports</a></li>
+  <li class="list-group-item"><a href="../Reports/FireReport.aspx">Generate Fire Reports</a></li>
+
+      </ul>
+            </div>
+    </div>
+  </div>
+</div>
+        
+        </div>
+       <%-- panel container of content --%>
+    <div class="Push">
+      <div class="col-md-6">
+     <div class="panel panel-danger adminthumbnail">  
+        <div class="panel-heading">Reports</div>
+       <div class="container col-md-12">
+
+            <%-- example of report --%>
+           <img src="../Images/Fire.png" style="padding-top: 3%; padding-left: 7%;" />
+</div>
+
+
+
+
+         </div>
+  </div>
+        </div>
+   
+
+ </form>
+    <script src="Jquery/jquery-1.11.min.js"></script>
+    <script src="../Styler/Bootstrap/bootstrap.min.js"></script>
+</asp:Content>

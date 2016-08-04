@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.inovatives.driverapp.Vehicle_reg">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" android:showAsAction="never" />
+
+    <item
+        android:id="@+id/profile_pic"
+        android:title="@string/app_profile_menu"
+
+        android:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/profile_view"
+                android:title="@string/activity_profile_view"
+                android:onClick="goProfile"/>
+
+            <item
+                android:id="@+id/logout_menu"
+                android:title="@string/title_profile_logout"
+                />
+
+
+            <item
+                android:id="@+id/profile_about"
+                android:title="@string/activity_profile_about"/>
+
+        </menu>
+    </item>
+</menu>
+<!-- From: file:/C:/Users/Neo/Documents/Targarian%20Tech/DriverApp-2015-05-18/DriverApp/app/src/main/res/menu/menu_vehicle_reg.xml -->

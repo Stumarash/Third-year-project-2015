@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.inovatives.driverapp.About">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about_title"
+        android:textSize="@dimen/header_text_size"
+        android:gravity="center"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/about_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/company_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:text="@string/company_name"
+            />
+
+        <TextView
+            android:id="@+id/num_members"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:text="@string/num_Members"
+            />
+
+
+
+        <TextView
+            android:id="@+id/telephone_number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/telephone_number"
+            />
+
+        <TextView
+            android:id="@+id/e_Mail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/e_Mail"
+            />
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_more_options"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/about_title"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btnLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/link"
+            android:textSize="@dimen/activity_text_size"
+            android:textColor="@color/login_screen_links"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@drawable/link_background"
+            android:layout_weight="1"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/Dokes/Desktop/Team/Svn%20Working%20Copy/DriverApp-2015-05-18/DriverApp/app/src/main/res/layout/activity_about.xml -->

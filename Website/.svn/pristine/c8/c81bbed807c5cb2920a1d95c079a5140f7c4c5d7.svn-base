@@ -1,0 +1,32 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master Pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="TargarianTech.Bootstrap.Index" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <div id="bodycontent">
+    
+    <div id="content">
+         <%-- Login box --%>
+			<form id="inputform" runat="server">
+			<h2> Login </h2>
+			<table id="mainlogin">
+				<tr><td><span class="glyphicon glyphicon-user"></span> Operator ID: </td><td><input type="text" name="userid" placeholder=" ID" class="inputs"/></td></tr>
+
+				<tr><td> <span class="glyphicon glyphicon-pencil"></span> Password: &nbsp </td><td><input type="password" name="pass" placeholder=" Password" class="inputs"/></td></tr>
+				
+				<tr><td rowspan="2" colspan="1">
+                    <asp:Label ID="Label1" runat="server" Text="Label" Visible="false"></asp:Label>
+                    </td></tr>
+               
+                <tr > <td colspan="2">
+                        <div class="btnspace">
+                            <asp:Button ID="BtnLogin" runat="server" Text="Login" BorderStyle="None" CssClass="btn-danger btn-sm col-xs-5" Style="margin-left: 50%" OnClick="BtnSubmit_Click" />
+                        </div>
+                    </td></tr>
+			
+			</table>
+			</form>
+		</div>
+        </div>
+    
+</asp:Content>

@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" tools:context="com.inovatives.driverapp.Profile">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" android:showAsAction="never">
+
+        <item
+            android:id="@+id/changeVehicle"
+            android:title="@string/changeVehicle"/>
+
+        <item
+            android:id="@+id/profile_about"
+            android:title="@string/activity_profile_about"/>
+
+        <item
+            android:id="@+id/logout_menu"
+            android:title="@string/title_profile_logout"
+            />
+
+    </item>
+</menu>
+<!-- From: file:/C:/Users/Dokes/Desktop/Team/Svn%20Working%20Copy/DriverApp-2015-05-18/DriverApp/app/src/main/res/menu/menu_profile.xml -->

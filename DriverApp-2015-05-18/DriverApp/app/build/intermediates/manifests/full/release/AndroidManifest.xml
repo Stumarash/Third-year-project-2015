@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.inovatives.driverapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.inovatives.driverapp.LoginScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.inovatives.driverapp.SendVehicleRegistration"
+            android:label="@string/title_activity_send_vehicle_registration" >
+        </activity>
+        <activity
+            android:name="com.inovatives.driverapp.VehicleInfo"
+            android:label="@string/title_activity_vehicle_info"
+            android:parentActivityName="com.inovatives.driverapp.BaseActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.inovatives.driverapp.BaseActivity" />
+        </activity>
+        <activity
+            android:name="com.inovatives.driverapp.MainActivity"
+            android:label="@string/title_activity_main"
+            android:parentActivityName="com.inovatives.driverapp.BaseActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.inovatives.driverapp.BaseActivity" />
+        </activity>
+        <activity
+            android:name="com.inovatives.driverapp.Profile"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName="com.inovatives.driverapp.BaseActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.inovatives.driverapp.BaseActivity" />
+        </activity>
+    </application>
+
+</manifest>

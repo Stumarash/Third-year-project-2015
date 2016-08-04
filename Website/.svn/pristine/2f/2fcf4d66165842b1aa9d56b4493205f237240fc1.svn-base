@@ -1,0 +1,90 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master Pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="TargarianTech.Profile" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="logpage">
+<div class="container" >
+      <%-- individual details of operator --%>
+    <header><h2>John Williamson</h2></header>
+
+    <hr />
+    <h3> Details </h3>
+    <table>
+<tr><td>Employee ID:</td><td>78576879</td></tr>
+<tr><td>Address:</td><td>4 Zinc Street. Kempton Park</td></tr>
+        <tr><td>Cellphone Number:</td><td>07899876879</td></tr>
+
+    </table>
+    <hr />
+    
+    <table >
+        <%-- searching of emergencies --%>
+        <tr><td>Search Emergency:</td><td><input type="text" name="userid" class="inputs"/></td><td><a href="#"><span class="glyphicon glyphicon-search"></span></a></td></tr>
+         </table>
+    <hr />
+    <%-- table showing recent logs --%>
+<h3> Recent Logs </h3>
+    <table class="table table-hover" >
+    <thead>
+        
+        <tr>
+            
+            <th>Incident Type</th>
+            <th>Time</th>
+            <th>location</th>
+            <th>Status</th>
+            
+               
+
+        </tr>
+         
+    </thead>
+    <tbody>
+        <tr class="success" >
+            <td>Medical</td>
+            <td>14:05</td>
+            <td>16 Reibeeck street hursthill, johanesburg</td>
+            <td>On Route</td>
+            
+
+        </tr>
+        <tr class="danger">
+            <td>Medical</td>
+            <td>17:50</td>
+            <td>Cnr Jeppe and Cnr Commissioner, Johanessburg</td>
+            <td>Completed</td>
+            
+            
+
+        </tr>
+        <tr class="info">
+            <td>Fire</td>
+            <td>23:20</td>
+            <td>14 5th avenue Melville, Johanessburg</td>
+            <td>On Scene</td>
+                        
+
+        </tr>
+        <tr class="success">
+            <td>Fire</td>
+            <td>03:08</td>
+            <td>9 Milner street Roodepoort, Johanessburg</td>
+            <td>On Route</td>         
+              
+
+
+        </tr>
+        </tbody> 
+    </table>
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+</asp:Content>

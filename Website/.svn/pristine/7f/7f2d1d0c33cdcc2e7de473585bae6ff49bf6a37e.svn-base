@@ -1,0 +1,67 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace TargarianTech.Bootstrap
+{
+    public partial class Dispatch : System.Web.UI.Page
+    {
+        int emergency_id;
+        string reg_no;
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            emergency_id = Int32.Parse(Request.QueryString["id"]);
+
+            TarReference.UserDataServiceClient client = new TarReference.UserDataServiceClient();
+            string emergency = client.view(emergency_id);
+
+            string[] lister = emergency.Split(',');
+
+            type.Value = lister[1];
+            getOnlineDrivers();
+            client.Close();
+        }
+
+        protected void BtnDispatch_Click(object sender, EventArgs e)
+        {
+
+            TarReference.UserDataServiceClient client = new TarReference.UserDataServiceClient();
+
+            if (fire.Value.Equals(""))
+            {
+                fire.Value = Convert.ToString(0);
+            }
+            if (ambulance.Value.Equals(""))
+            {
+                ambulance.Value = Convert.ToString(0);
+            }
+            int numFire = Convert.ToInt32(fire.Value.ToString());
+            int numAmbulance = Convert.ToInt32(ambulance.Value.ToString());
+
+          
+
+            client.Dispatch(emergency_id, reg_no);
+
+            client.Close();
+            Response.Redirect("../Pages/Logs.aspx");
+        }
+
+        protected void getOnlineDrivers()
+        {
+            TarReference.UserDataServiceClient client = new TarReference.UserDataServiceClient();
+
+            DropDownList1.DataSource = client.OnlineDrivers().ToList();
+            DropDownList1.DataTextField = "Reg_No";
+            DropDownList1.DataValueField = "Driver_id";
+
+            DropDownList1.DataBind();
+
+            reg_no = Convert.ToString(DropDownList1.SelectedItem);
+
+        }
+        }
+
+    }

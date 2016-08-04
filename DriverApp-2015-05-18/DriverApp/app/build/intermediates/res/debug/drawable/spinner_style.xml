@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"
+android:drawable="@drawable/image_for_rotation"
+    android:pivotX="50%"
+    android:pivotY="50%"
+/><!-- From: file:/C:/Users/Dokes/Desktop/Team/Svn%20Working%20Copy/DriverApp-2015-05-18/DriverApp/app/src/main/res/drawable/spinner_style.xml -->
